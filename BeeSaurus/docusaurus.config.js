@@ -8,10 +8,6 @@ const config = {
   tagline: 'Documentação dos produtos BeeCloud',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
   // URL do site
 url: 'https://eloa130906.github.io',
 baseUrl: '/BeeSaurus/',
