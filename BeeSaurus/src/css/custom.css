@@ -103,3 +103,9 @@
   color: #0d0d0d;
   text-decoration: underline;
 }
+
+
+/* Espaço entre a imagem e o texto Home */
+.navbar__logo {
+  margin-right: 15px !important;
+}

@@ -13,11 +13,11 @@ const config = {
   },
 
   // URL do site
-  url: 'https://docs.beecloud.com.br',
-  baseUrl: '/',
+url: 'https://eloa130906.github.io',
+baseUrl: '/BeeSaurus/',
 
-  organizationName: 'beecloud',
-  projectName: 'BeeSaurus',
+organizationName: 'eloa130906',
+projectName: 'BeeSaurus',
 
   onBrokenLinks: 'throw',
 
@@ -62,43 +62,28 @@ const config = {
         respectPrefersColorScheme: false,
       },
 
-      navbar: {
-        title: 'BeeCloud',
-        logo: {
-          alt: 'Logo BeeCloud',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentação',
-          },
-          {to: '/docs/beetalk', label: 'BeeTalk', position: 'left'},
-          {to: '/docs/beesign', label: 'BeeSign', position: 'left'},
-        ],
-      },
+  
+navbar: {
+  title: 'Home',
+  logo: {
+    alt: 'Logo BeeCloud',
+    src: 'img/logobee.png',
+  },
+  items: [
+    {
+      type: 'docSidebar',
+      sidebarId: 'tutorialSidebar',
+      position: 'left',
+      label: 'Documentação',
+    },
+    {
+      to: '/atualizacoes',
+      label: 'Atualizações',
+      position: 'left',
+    },
+  ],
+},
 
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Produtos',
-            items: [
-              {label: 'BeeTalk', to: '/docs/beetalk'},
-              {label: 'BeeSign', to: '/docs/beesign'},
-            ],
-          },
-          {
-            title: 'Documentação',
-            items: [
-              {label: 'Introdução', to: '/docs/intro'},
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} BeeCloud. Todos os direitos reservados.`,
-      },
 
       prism: {
         theme: prismThemes.github,

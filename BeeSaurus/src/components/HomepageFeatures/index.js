@@ -1,57 +1,55 @@
 
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Comunicação digital',
-    subtitle: '',
+    title: 'BeeTalk',
     image: '/img/beetalk.png',
-    description: (
-      <>
-        Conecte sua empresa aos clientes pelos canais digitais,
-        de forma simples e organizada.
-      </>
-    ),
+    description:
+      'Encontre informações, manuais e orientações sobre o uso da plataforma BeeTalk.',
+    to: '/docs/beetalk/intro',
   },
   {
-    title: 'Assinatura Eletrônica',
-    subtitle: '',
+    title: 'BeeSign',
     image: '/img/beesign.png',
-    description: (
-      <>
-        Envie, gerencie e acompanhe documentos para assinatura
-        eletrônica de forma prática e segura.
-      </>
-    ),
+    description:
+      'Consulte documentações, procedimentos e orientações sobre a plataforma BeeSign.',
+    to: '/docs/beesign/intro',
   },
 ];
 
-function Feature({ title, subtitle, image, description, to }) {
+function Feature({ title, image, description, to }) {
+  const imageUrl = useBaseUrl(image);
+
   return (
-    <div className={clsx('col col--6', styles.featureCol)}>
-      <div className={styles.featureCard}>
-        <div className={styles.featureImage}>
-          <img src={image} alt={`Produto ${title}`} />
-        </div>
+    <div className="col col--6">
+      <Link
+        to={to}
+        className={styles.featureLink}
+      >
+        <div className={styles.featureCard}>
 
-        <div className={styles.featureContent}>
-          <Heading as="h3">{title}</Heading>
-          <h4>{subtitle}</h4>
-          <p>{description}</p>
+          <div className={styles.featureImage}>
+            <img src={imageUrl} alt={`Logo ${title}`} />
+          </div>
 
-          {to && (
-            <Link
-              className="button button--primary button--sm"
-              to={to}
-            >
-              Ver documentação
-            </Link>
-          )}
+          <div className={styles.featureContent}>
+            <Heading as="h3">{title}</Heading>
+
+            <p>{description}</p>
+
+            <span className={styles.featureAction}>
+              Acessar documentação
+              <span> →</span>
+            </span>
+          </div>
+
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -60,11 +58,17 @@ export default function HomepageFeatures() {
   return (
     <section id="produtos" className={styles.features}>
       <div className="container">
+
         <div className={styles.sectionHeader}>
-          <span>NOSSAS SOLUÇÕES</span>
-          <Heading as="h2">Conheça nossos produtos</Heading>
+          <span>NOSSOS PRODUTOS</span>
+
+          <Heading as="h2">
+            Escolha uma documentação
+          </Heading>
+
           <p>
-            Soluções inteligentes para simplificar a rotina da sua empresa.
+            Selecione o produto que deseja consultar
+            e acesse sua central de informações.
           </p>
         </div>
 
@@ -73,6 +77,7 @@ export default function HomepageFeatures() {
             <Feature key={props.title} {...props} />
           ))}
         </div>
+
       </div>
     </section>
   );
