@@ -1,3 +1,4 @@
+
 name: Deploy BeeCloud Docs
 
 on:
@@ -22,7 +23,7 @@ jobs:
       - name: Baixar código
         uses: actions/checkout@v4
 
-      - name: Configurar Node
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
