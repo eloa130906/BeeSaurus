@@ -6,7 +6,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'BeeCloud Docs',
   tagline: 'Documentação dos produtos BeeCloud',
-  favicon: 'img/favicon.ico',
+favicon: 'img/logobee.png',
 
   // URL do site
   url: 'https://eloa130906.github.io',
@@ -47,8 +47,7 @@ const config = {
       isCloseable: true,
     },
 
-    image: 'img/logo.svg',
-
+    image: 'img/comeia.png',
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: false,
