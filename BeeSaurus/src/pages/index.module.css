@@ -1,23 +1,172 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.hero {
+  background: #171717;
+  color: #ffffff;
+  padding: 100px 0;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 680px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #f2c200;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.heroTitle span {
+  color: #f2c200;
+  display: block;
+}
+
+.heroSubtitle {
+  color: #c5c5c5;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 570px;
+  margin-bottom: 34px;
 }
 
 .buttons {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  padding: 15px 25px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.primaryButton {
+  background: #f2c200;
+  color: #171717;
+}
+
+.primaryButton:hover {
+  background: #ffda35;
+  color: #171717;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  border: 1px solid #555555;
+  color: #ffffff;
+}
+
+.secondaryButton:hover {
+  border-color: #f2c200;
+  color: #f2c200;
+  text-decoration: none;
+}
+
+.heroImage {
+  flex: 0 1 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoContainer {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222222;
+  border: 1px solid #383838;
+  border-radius: 28px;
+  padding: 35px;
+}
+
+.logoContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.imageCaption {
+  color: #999999;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 70px 0;
+  }
+
+  .heroInner {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .heroSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroImage {
+    flex: auto;
+  }
+
+  .logoContainer {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
 }

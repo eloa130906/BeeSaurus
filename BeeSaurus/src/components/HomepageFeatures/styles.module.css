@@ -1,11 +1,102 @@
+
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  background: #202020;
+  padding: 80px 0;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionHeader span {
+  color: #f2c200;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sectionHeader h2 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.sectionHeader p {
+  color: #bdbdbd;
+  font-size: 16px;
+}
+
+.featureCol {
+  margin-bottom: 25px;
+}
+
+.featureCard {
+  height: 100%;
+  background: #292929;
+  border: 1px solid #414141;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  border-color: #f2c200;
+}
+
+.featureImage {
+  height: 260px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.featureImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.featureContent {
+  padding: 28px;
+}
+
+.featureContent h3 {
+  color: #f2c200;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.featureContent h4 {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.featureContent p {
+  color: #bdbdbd;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .features {
+    padding: 55px 0;
+  }
+
+  .sectionHeader h2 {
+    font-size: 27px;
+  }
+
+  .featureImage {
+    height: 220px;
+  }
 }

@@ -1,42 +1,79 @@
+
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
+import Heading from '@theme/Heading';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function Hero() {
+  const logoUrl = useBaseUrl('/img/comeia.png');
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+    <section className={styles.hero}>
+      <div className={clsx('container', styles.heroInner)}>
+
+        <div className={styles.heroText}>
+          <span className={styles.eyebrow}>
+            TECNOLOGIA • INOVAÇÃO • RESULTADOS
+          </span>
+
+          <Heading as="h1" className={styles.heroTitle}>
+            Tecnologia que transforma
+            <span> negócios em resultados.</span>
+          </Heading>
+
+          <p className={styles.heroSubtitle}>
+            Conheça as soluções da BeeCloud e encontre toda a
+            documentação necessária para aproveitar o melhor
+            das nossas tecnologias.
+          </p>
+
+          <div className={styles.buttons}>
+            <Link
+              className={styles.primaryButton}
+              to="/docs/intro"
+            >
+              Acessar documentação
+            </Link>
+
+            <a
+              className={styles.secondaryButton}
+              href="#produtos"
+            >
+              Conhecer produtos
+            </a>
+          </div>
         </div>
+
+        <div className={styles.heroImage}>
+          <div className={styles.logoContainer}>
+            <img src={logoUrl} alt="Logo BeeCloud" />
+          </div>
+          <span className={styles.imageCaption}>
+            Soluções inteligentes para o seu negócio.
+          </span>
+        </div>
+
       </div>
-    </header>
+    </section>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title="BeeCloud"
+      description="Conheça as soluções e a documentação oficial da BeeCloud."
+    >
+      <Hero />
+
       <main>
-        <HomepageFeatures />
+        <section id="produtos">
+          <HomepageFeatures />
+        </section>
       </main>
     </Layout>
   );
