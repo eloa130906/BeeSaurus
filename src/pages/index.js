@@ -53,7 +53,7 @@ function Hero() {
             <img src={logoUrl} alt="Logo BeeCloud" />
           </div>
           <span className={styles.imageCaption}>
-            Soluções inteligentes para o seu negócio!!!!!!!!!!!!!!!!!!!!!!!!!!.
+            Soluções inteligentes para o seu negócio.
           </span>
         </div>
 
